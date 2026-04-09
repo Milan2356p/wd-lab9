@@ -1,0 +1,111 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#74ebd5,#ACB6E5);
+    color:#333;
+    text-align:center;
+}
+
+header{
+    background:#222;
+    color:white;
+    padding:20px;
+}
+
+.profile-card{
+    margin:30px auto;
+    background:white;
+    width:300px;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+
+    animation: fadeIn 2s ease;
+}
+
+.profile-card img{
+    border-radius:50%;
+    width:150px;
+
+    transition: transform 0.5s;
+}
+
+.profile-card img:hover{
+    transform: scale(1.1) rotate(5deg);
+}
+
+.about{
+    margin:40px;
+}
+
+.columns{
+    column-count:2;
+    column-gap:30px;
+    column-rule:2px solid gray;
+
+    background:white;
+    padding:20px;
+    border-radius:10px;
+}
+
+.skills{
+    margin:40px;
+}
+
+.skill-box{
+    display:inline-block;
+    margin:20px;
+    padding:20px;
+    background:white;
+    border-radius:10px;
+    width:120px;
+
+    transition:0.4s;
+}
+
+.skill-box:hover{
+    transform: translateY(-10px);
+    background:#222;
+    color:white;
+}
+
+.skill-box i{
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+footer{
+    background:#222;
+    color:white;
+    padding:15px;
+    margin-top:30px;
+}
+
+/* Animation */
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(-30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width:768px){
+
+    .columns{
+        column-count:1;
+    }
+
+    .skill-box{
+        width:80%;
+    }
+}
